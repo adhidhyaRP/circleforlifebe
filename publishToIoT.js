@@ -8,12 +8,13 @@ app.use(cors());
 app.use(express.json()); // To parse JSON bodies
 
 const device = awsIot.device({
-    keyPath: "C:\\Users\\adhid\\OneDrive\\Documents\\GUVI ZEN\\CycleProject\\backend\\Certi\\private.pem.key",
-    certPath: "C:\\Users\\adhid\\OneDrive\\Documents\\GUVI ZEN\\CycleProject\\backend\\Certi\\certificate.pem.crt",
-    caPath: "C:\\Users\\adhid\\OneDrive\\Documents\\GUVI ZEN\\CycleProject\\backend\\Certi\\AmazonRootCA1.pem",
-    clientId: "myNodeJsClient",
-    host: "a2r1skj9umgl4j-ats.iot.eu-north-1.amazonaws.com"
-  });
+  keyPath: "./Certi/private.pem.key",
+  certPath: "./Certi/certificate.pem.crt",
+  caPath: "./Certi/AmazonRootCA1.pem",
+  clientId: "myNodeJsClient",
+  host: "a2r1skj9umgl4j-ats.iot.eu-north-1.amazonaws.com"
+});
+
   
 
 const topic = "cycle/data"; // Replace with your IoT Core topic name
